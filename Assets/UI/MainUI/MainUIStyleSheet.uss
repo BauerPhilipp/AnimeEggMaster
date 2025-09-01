@@ -38,3 +38,18 @@ VisualElement {
     border-top-color: rgb(0, 0, 0);
     border-bottom-color: rgb(0, 0, 0);
 }
+
+.unity-base-field__label--with-dragger {
+    display: none;
+}
+
+.unity-integer-field__input {
+    background-size: 100% 100%;
+    width: 120px;
+    height: 91px;
+}
+
+.unity-text-element--inner-input-field-component {
+    -unity-text-align: middle-center;
+    font-size: 67px;
+}
