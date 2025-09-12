@@ -12,3 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30d5128668fb71049ade24c522291e9a, type: 3}
   m_Name: EggMasterSettings
   m_EditorClassIdentifier: Assembly-CSharp::EggMasterSettings
+  minutesToCook: 3
+  secondsToCook: 15
+  startTemperature: 25
+  weight: 20
+  counterStarted: 0
+  eggSize: 1

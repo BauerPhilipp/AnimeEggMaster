@@ -1,33 +1,29 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/MainUI/MainUIStyleSheet.uss?fileID=7433441132597879392&amp;guid=5284e976622115946a01d7a29580e0ec&amp;type=3#MainUIStyleSheet" />
     <ui:VisualElement name="MainContainer" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
-        <ui:VisualElement name="SaveSpace" style="flex-grow: 0; flex-basis: 5%; background-color: rgb(96, 0, 0);" />
-        <ui:VisualElement name="Header" style="flex-grow: 0; flex-basis: 10%; flex-shrink: 0; background-color: rgb(72, 66, 0); flex-direction: row;">
+        <ui:VisualElement name="SaveSpace" style="flex-grow: 0; flex-basis: 5%; background-color: rgba(96, 0, 0, 0);" />
+        <ui:VisualElement name="Header" style="flex-grow: 0; flex-basis: 10%; flex-shrink: 0; background-color: rgba(72, 66, 0, 0); flex-direction: row;">
             <ui:VisualElement style="flex-grow: 1; flex-basis: 50%; flex-direction: row;" />
             <ui:VisualElement style="flex-grow: 1; flex-basis: 50%; flex-direction: row; justify-content: flex-end; align-items: center;">
-                <ui:VisualElement style="flex-grow: 0; flex-shrink: 0; width: 200px; height: 200px; background-image: url(&quot;project://database/Assets/Textures/EggSpriteSheet.psd?fileID=-863539156&amp;guid=d819bd6826adad7439a74d491f077f67&amp;type=3#EggSpriteSheet_0&quot;);" />
+                <ui:VisualElement style="flex-grow: 0; flex-shrink: 0; width: 200px; height: 200px; background-image: url(&quot;project://database/Assets/Textures/Settings.png?fileID=1102556458&amp;guid=700e97c42799657478fa5ad9c39d989a&amp;type=3#Settings_0&quot;); -unity-background-scale-mode: scale-to-fit; background-position-y: center; background-position-x: center; -unity-slice-scale: 1px; margin-right: 25px;" />
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement name="MainElement" style="flex-grow: 1; flex-basis: 65%; background-color: rgb(35, 0, 123); flex-direction: row;">
-            <ui:VisualElement name="EggTemperatureContainer" style="flex-grow: 0; flex-shrink: 0; flex-basis: 20%; background-color: rgba(0, 0, 0, 0.39); align-items: center; justify-content: space-evenly;">
-                <ui:VisualElement name="EggCold" class="eggTemperatureElement" style="background-image: url(&quot;project://database/Assets/Textures/EggSpriteSheet.psd?fileID=631957402&amp;guid=d819bd6826adad7439a74d491f077f67&amp;type=3#EggSpriteSheet_6&quot;);" />
-                <ui:VisualElement name="EggWarm" class="eggTemperatureElement" style="background-image: url(&quot;project://database/Assets/Textures/EggSpriteSheet.psd?fileID=-684842725&amp;guid=d819bd6826adad7439a74d491f077f67&amp;type=3#EggSpriteSheet_7&quot;);" />
-            </ui:VisualElement>
+        <ui:VisualElement name="MainElement" style="flex-grow: 1; flex-basis: 65%; background-color: rgba(35, 0, 123, 0); flex-direction: column;">
             <ui:VisualElement style="flex-grow: 1; flex-basis: 60%;" />
-            <ui:VisualElement name="EggSizeContainer" style="flex-grow: 0; flex-basis: 20%; flex-shrink: 0; background-color: rgba(0, 0, 0, 0.39); align-items: center; justify-content: space-evenly;">
-                <ui:VisualElement name="EggSizeXL" class="eggSizeElement" style="background-image: url(&quot;project://database/Assets/Textures/EggSpriteSheet.psd?fileID=-749906708&amp;guid=d819bd6826adad7439a74d491f077f67&amp;type=3#EggSpriteSheet_5&quot;);" />
-                <ui:VisualElement name="EggSizeL" class="eggSizeElement" style="background-image: url(&quot;project://database/Assets/Textures/EggSpriteSheet.psd?fileID=-147079685&amp;guid=d819bd6826adad7439a74d491f077f67&amp;type=3#EggSpriteSheet_4&quot;);" />
-                <ui:VisualElement name="EggSizeM" class="eggSizeElement" style="background-image: url(&quot;project://database/Assets/Textures/EggSpriteSheet.psd?fileID=393306716&amp;guid=d819bd6826adad7439a74d491f077f67&amp;type=3#EggSpriteSheet_3&quot;);" />
-                <ui:VisualElement name="EggSizeS" class="eggSizeElement" style="background-image: url(&quot;project://database/Assets/Textures/EggSpriteSheet.psd?fileID=-730176049&amp;guid=d819bd6826adad7439a74d491f077f67&amp;type=3#EggSpriteSheet_2&quot;); -unity-background-image-tint-color: rgb(255, 255, 255); -unity-background-scale-mode: stretch-to-fill; background-position-y: center;" />
+            <ui:VisualElement name="EggSizeContainer" style="flex-grow: 0; flex-basis: 20%; flex-shrink: 0; background-color: rgba(0, 0, 0, 0.08); align-items: flex-start; justify-content: space-evenly; border-left-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgba(0, 0, 0, 0); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; border-top-left-radius: 45px; border-top-right-radius: 45px; border-bottom-right-radius: 0; border-bottom-left-radius: 0; flex-direction: row; border-right-color: rgb(0, 0, 0);">
+                <ui:VisualElement name="EggSizeS" class="eggSizeElement" style="background-image: url(&quot;project://database/Assets/Textures/EggGirl.png?fileID=819114523&amp;guid=fe384439f38261e4ca6d61a325130fd8&amp;type=3#EggGirl_0&quot;);">
+                    <ui:VisualElement name="EggSizeS_Shadow" class="eggSizeElement" style="background-image: url(&quot;project://database/Assets/Textures/EggGirl.png?fileID=819114523&amp;guid=fe384439f38261e4ca6d61a325130fd8&amp;type=3#EggGirl_0&quot;); margin-top: 0;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="EggSizeM" class="eggSizeElement" style="background-image: url(&quot;project://database/Assets/Textures/EggGirl.png?fileID=650172365&amp;guid=fe384439f38261e4ca6d61a325130fd8&amp;type=3#EggGirl_1&quot;);">
+                    <ui:VisualElement name="EggSizeM_Shadow" class="eggSizeElement" style="background-image: url(&quot;project://database/Assets/Textures/EggGirl.png?fileID=650172365&amp;guid=fe384439f38261e4ca6d61a325130fd8&amp;type=3#EggGirl_1&quot;); margin-top: 0;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="EggSizeL" class="eggSizeElement" style="background-image: url(&quot;project://database/Assets/Textures/EggGirl.png?fileID=176951739&amp;guid=fe384439f38261e4ca6d61a325130fd8&amp;type=3#EggGirl_2&quot;);">
+                    <ui:VisualElement name="EggSizeL_Shadow" class="eggSizeElement" style="background-image: url(&quot;project://database/Assets/Textures/EggGirl.png?fileID=176951739&amp;guid=fe384439f38261e4ca6d61a325130fd8&amp;type=3#EggGirl_2&quot;); margin-top: 0;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="EggSizeXL" class="eggSizeElement" style="background-image: url(&quot;project://database/Assets/Textures/EggGirl.png?fileID=1055523604&amp;guid=fe384439f38261e4ca6d61a325130fd8&amp;type=3#EggGirl_3&quot;);">
+                    <ui:VisualElement name="EggSizeXL_Shadow" class="eggSizeElement" style="background-image: url(&quot;project://database/Assets/Textures/EggGirl.png?fileID=1055523604&amp;guid=fe384439f38261e4ca6d61a325130fd8&amp;type=3#EggGirl_3&quot;); margin-top: 0;" />
+                </ui:VisualElement>
             </ui:VisualElement>
-        </ui:VisualElement>
-        <ui:VisualElement name="Counter" style="flex-grow: 0; flex-basis: 20%; flex-shrink: 0; background-color: rgb(0, 88, 44); align-items: center; justify-content: flex-start;">
-            <ui:VisualElement name="CounterContainer" style="flex-grow: 0; flex-direction: row; flex-shrink: 0; align-items: center; justify-content: center; background-color: rgb(255, 255, 255); margin-top: 50px; width: 300px; height: 100px;">
-                <ui:IntegerField label="Integer Field" value="42" name="Minutes" />
-                <ui:Label text=":" style="font-size: 72px; margin-top: 0; margin-bottom: 0;" />
-                <ui:IntegerField label="Integer Field" value="42" name="Seconds" />
-            </ui:VisualElement>
-            <ui:Button text="Start" name="CounterButton" style="border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; margin-top: 50px; width: 300px; height: 100px; font-size: 80px; -unity-font-style: italic; -unity-text-outline-color: rgb(0, 0, 0); -unity-text-outline-width: 0; text-shadow: 4px 4px 0 rgb(229, 10, 0);" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
