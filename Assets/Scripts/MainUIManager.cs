@@ -5,7 +5,6 @@ using UnityEngine.UIElements;
 public class MainUIManager : MonoBehaviour
 {
     [SerializeField] EggMasterSettings settings;
-    [SerializeField] VisualElement root;
 
     #region Egg Size Buttons
     [SerializeField] VisualElement eggSizeS;
@@ -18,12 +17,25 @@ public class MainUIManager : MonoBehaviour
     [SerializeField] VisualElement eggSizeXL_Shadow;
     #endregion
 
+    VisualElement root;
+    VisualElement settingsButton;
 
 
     void Start()
     {
+        Application.targetFrameRate = 60;
         root = GetComponent<UIDocument>().rootVisualElement;
+        settingsButton = root.Q<VisualElement>("SettingsButton");
+        settingsButton.RegisterCallback<ClickEvent>(OnSettingButtonClicked);
+
+
         InitEggSizeButtons();
+
+    }
+
+    private void OnSettingButtonClicked(ClickEvent evt)
+    {
+        Debug.Log("Settings Button Clicked");
     }
 
     private void InitEggSizeButtons()
@@ -37,13 +49,52 @@ public class MainUIManager : MonoBehaviour
         eggSizeL_Shadow = root.Q<VisualElement>("EggSizeL_Shadow");
         eggSizeXL_Shadow = root.Q<VisualElement>("EggSizeXL_Shadow");
         eggSizeS.RegisterCallback<ClickEvent>(EggSizeS);
+        eggSizeM.RegisterCallback<ClickEvent>(EggSizeM);
+        eggSizeL.RegisterCallback<ClickEvent>(EggSizeL);
+        eggSizeXL.RegisterCallback<ClickEvent>(EggSizeXL);
+
+        ResetButtonShadows();
     }
 
+
+    #region Egg Size Button Callbacks
     private void EggSizeS(ClickEvent evt)
     {
+        ResetButtonShadows();
         settings.EggSize = EggSize.Small;
         eggSizeS_Shadow.style.visibility = Visibility.Visible;
         Debug.Log("Egg Size set to Small");
+    }
+    private void EggSizeM(ClickEvent evt)
+    {
+        ResetButtonShadows();
+        settings.EggSize = EggSize.Medium;
+        eggSizeM_Shadow.style.visibility = Visibility.Visible;
+        Debug.Log("Egg Size set to Medium");
+    }
+    private void EggSizeL(ClickEvent evt)
+    {
+        ResetButtonShadows();
+        settings.EggSize = EggSize.Large;
+        eggSizeL_Shadow.style.visibility = Visibility.Visible;
+        Debug.Log("Egg Size set to Large");
+    }
+    private void EggSizeXL(ClickEvent evt)
+    {
+        ResetButtonShadows();
+        settings.EggSize = EggSize.ExtraLarge;
+        eggSizeXL_Shadow.style.visibility = Visibility.Visible;
+        Debug.Log("Egg Size set to Extra Large");
+    }
+
+    #endregion
+
+    private void ResetButtonShadows()
+    {
+        eggSizeS_Shadow.style.visibility = Visibility.Hidden;
+        eggSizeM_Shadow.style.visibility = Visibility.Hidden;
+        eggSizeL_Shadow.style.visibility = Visibility.Hidden;
+        eggSizeXL_Shadow.style.visibility = Visibility.Hidden;
     }
 
 
